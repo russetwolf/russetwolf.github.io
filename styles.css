@@ -47,7 +47,7 @@ header p {
 header img {
     float: right;
     max-width: 35vw;
-    padding: 1em 1em 0 0;
+    padding: 0.5em 0.5em 0 0;
 }
 .photo-credit {
     text-align: right;
@@ -66,6 +66,7 @@ section {
     margin: 0 1em;
     line-height: 1.8rem;
 }
+
 #our-story p {
     padding-top: 1rem;
 }
@@ -87,6 +88,7 @@ section {
     padding-top: 1.25rem;
     padding-bottom 0.5rem;
 }
+
 .testimonial-gallery {
     display: flex;
     flex-flow: row wrap;
@@ -110,7 +112,6 @@ section {
     flex-basis: 100%;
 }
 
-
 footer {
     margin: 0 1em;
     line-height: 2rem;
@@ -120,4 +121,25 @@ footer h2 {
 }
 footer p {
     padding-top: 1rem;
+}
+
+@media only screen and (min-width: 641px) {
+    header {
+        background: url(images/hero/taylor-franz-medium.jpg) no-repeat rgb(24,24,24) center;
+    }
+}
+@media only screen and (min-width: 1921px) {
+    header {
+        background: url(images/hero/taylor-franz-large.jpg) no-repeat rgb(24,24,24) center;
+    }
+}
+@media only screen and (min-width: 2401px) {
+    header {
+        background: url(images/hero/taylor-franz-original.jpg) no-repeat rgb(24,24,24) center;
+    }
+}
+@media only screen and (min-height: 853px) {
+    header {
+        background: url(images/hero/taylor-franz-medium.jpg) no-repeat rgb(24,24,24) center;
+    }
 }
