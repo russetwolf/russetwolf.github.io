@@ -47,7 +47,8 @@ header p {
 header img {
     float: right;
     max-width: 35vw;
-    padding: 0.5em 0.5em 0 0;
+    width: 130px;
+    padding: 0.4em 0.4em 0;
 }
 .photo-credit {
     text-align: right;
@@ -125,21 +126,156 @@ footer p {
 
 @media only screen and (min-width: 641px) {
     header {
-        background: url(images/hero/taylor-franz-medium.jpg) no-repeat rgb(24,24,24) center;
-    }
-}
-@media only screen and (min-width: 1921px) {
-    header {
-        background: url(images/hero/taylor-franz-large.jpg) no-repeat rgb(24,24,24) center;
-    }
-}
-@media only screen and (min-width: 2401px) {
-    header {
-        background: url(images/hero/taylor-franz-original.jpg) no-repeat rgb(24,24,24) center;
+        background-image: url(images/hero/taylor-franz-medium.jpg);
     }
 }
 @media only screen and (min-height: 853px) {
     header {
-        background: url(images/hero/taylor-franz-medium.jpg) no-repeat rgb(24,24,24) center;
+        background-image: url(images/hero/taylor-franz-medium.jpg);
+    }
+}
+@media only screen and (min-width: 1921px) {
+    header {
+        background-image: url(images/hero/taylor-franz-large.jpg);
+    }
+}
+@media only screen and (min-width: 2401px) {
+    header {
+        background-image: url(images/hero/taylor-franz-original.jpg);
+    }
+}
+
+/* TO DO: use aspect ratios for the hero section in future.*/
+
+/* Above all works for phones in portrait.
+ * Below for tablets in portrait.
+ */
+
+@media only screen and (min-width: 450px) {
+    header img {
+        max-width: 25vw;
+    }
+    #menu img {
+        width: 35vw;
+        float: right;
+        margin: 1.5rem 0 1rem 1rem;
+    }
+    .menu-item {
+        width: 50vw;
+    }
+    .testimonial-gallery {
+        align-items: center;
+    }
+    .testimonial {
+        align-items: center;
+        width: 75%;
+    }
+    .testimonial img {
+        width: 60px;
+    }
+}
+
+/* Below for phones in landscape.*/
+
+ @media only screen and (max-height: 600px) {
+    header {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header img {
+        max-width: 15vw;
+    }
+    .cta {
+        width: 70%;
+        padding: 0.5em;
+        margin: 0.5em 0;
+    }
+}
+
+/* Below for tablets in landscape.*/
+
+@media only screen and (min-width: 1000px) {
+    #menu h3 {
+        clear: both;
+    }
+    #menu img:nth-of-type(odd) {
+        width: 35vw;
+        margin: 1.5rem 0 0.5rem 0.5rem;
+        float: right;
+    }
+    #menu img:nth-of-type(even) {
+        width: 35vw;
+        margin: 1.5rem 2.5rem 0.5rem 0;
+        float: left;
+    }
+    header img {
+        max-width: 15vw;
+    }
+    .menu-item {
+        width: 50vw;
+    }
+    .testimonial {
+        max-width: 30vw;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+    .testimonial-gallery {
+        gap: 1em;
+        justify-items: center;
+    }
+    .snippet {
+        text-align: center;
+    }
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    footer h2 {
+        flex-basis: 100%;
+    }
+}
+
+/* Below for desktops.*/
+
+@media only screen and (min-width: 1200px) {
+    main {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    section {
+        width: 800px;
+    }
+    #menu img:nth-of-type(odd) {
+        width: 300px;
+        margin: 1.5rem 0 0.5rem 0.5rem;
+        float: right;
+    }
+    #menu img:nth-of-type(even) {
+        width: 300px;
+        margin: 1.5rem 2.5rem 0.5rem 0;
+        float: left;
+    }
+    .menu-item {
+        width: 450px;
+    }
+    .testimonial {
+        max-width: 25%;
+        flex-flow: column wrap;
+        justify-content: space-between;
+    }
+    footer {
+        width: 800px;
+        margin: auto;
+    }
+}
+
+/* Below for very wide.*/
+
+@media only screen and (min-width: 1450px) {
+    header img {
+        float: left;
     }
 }
